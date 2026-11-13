@@ -27,10 +27,3 @@ flowchart LR
 
 En el diagrama, el **cliente** se comunica con el **servidor** local mediante `127.0.0.1:5000`: primero solicita la **ruta** `/compra`, después envía los campos con **POST** y recibe una **response** HTTP con el **HTML** preparado por Flask.
 
-
-### Interpretación de los demás casos solicitados
-
-- Compra sin descuento: 2 artículos a $250 suman $500; como el subtotal no supera $1,000, el total es $500.
-- Salario con horas extra: 45 horas a $100 dan $4,000 por las primeras 40 horas y $1,000 por las 5 horas extra; el total es $5,000.
-- Salario sin horas extra: 40 horas a $100 dan un total de $4,000.
-- Temperatura: 25 °C equivalen a 77 °F y 298.15 K.
