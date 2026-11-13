@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+{% block title %}Servicios{% endblock %}
+{% block content %}
+<section class="page-banner">
+  <div class="container"><span class="eyebrow"><a href="{{ url_for('inicio') }}">Inicio</a> <span aria-hidden="true">/</span> Servicios</span><h1>Soluciones que te acercan</h1><p>Servicios prácticos, atención cercana y recursos para seguir avanzando.</p></div>
+</section>
+<section class="section-space">
+  <div class="container">
+    <div class="row g-4">
+      <div class="col-md-6 col-lg-4"><article class="service-card"><img src="{{ url_for('static', filename='img/portal-compra.svg') }}" alt="Planificación y organización de compras"><div class="service-card-body"><span class="service-category">PARA TU DÍA A DÍA</span><h2>Asesoría práctica</h2><p>Orientación personalizada para organizar tus compras, entender tus opciones y elegir con confianza.</p><a href="{{ url_for('contacto') }}">Solicitar información <span aria-hidden="true">→</span></a></div></article></div>
+      <div class="col-md-6 col-lg-4"><article class="service-card"><img src="{{ url_for('static', filename='img/portal-empresa.svg') }}" alt="Equipo de trabajo colaborando en un proyecto"><div class="service-card-body"><span class="service-category">PARA TU NEGOCIO</span><h2>Apoyo a negocios</h2><p>Recursos y acompañamiento para que pequeños negocios gestionen mejor sus procesos.</p><a href="{{ url_for('contacto') }}">Solicitar información <span aria-hidden="true">→</span></a></div></article></div>
+      <div class="col-md-6 col-lg-4"><article class="service-card"><img src="{{ url_for('static', filename='img/portal-temperatura.svg') }}" alt="Herramientas digitales para realizar cálculos"><div class="service-card-body"><span class="service-category">RECURSOS DIGITALES</span><h2>Herramientas rápidas</h2><p>Calculadoras gratuitas para resolver operaciones frecuentes desde cualquier dispositivo.</p><a href="{{ url_for('compra') }}">Explorar calculadoras <span aria-hidden="true">→</span></a></div></article></div>
+    </div>
+  </div>
+</section>
+{% endblock %}

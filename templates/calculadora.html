@@ -1,0 +1,42 @@
+{% extends "base.html" %}
+{% block content %}
+<section class="page-banner">
+  <div class="container">
+    <span class="eyebrow"><a href="{{ url_for('inicio') }}">Inicio</a> <span aria-hidden="true">/</span> {{ page_label }}</span>
+    <h1>{{ heading }}</h1>
+    <p>{{ description }}</p>
+  </div>
+</section>
+<section class="section-space">
+  <div class="container">
+    <div class="row justify-content-center g-4">
+      <div class="col-lg-5">
+        <div class="form-panel">
+          <div class="panel-topline"><span class="panel-icon">{{ icon }}</span><span class="small-label">CALCULADORA</span></div>
+          <h2>{{ form_heading }}</h2>
+          <p class="panel-copy">{{ form_description }}</p>
+          {% if error %}<div class="alert alert-danger" role="alert">{{ error }}</div>{% endif %}
+          <form method="post" novalidate>
+            {% block fields %}{% endblock %}
+            <button class="btn btn-brand w-100 mt-2" type="submit">Calcular resultado <span aria-hidden="true">→</span></button>
+          </form>
+          <p class="form-footnote"><span aria-hidden="true">🔒</span> Tus datos solo se utilizan para realizar el cálculo.</p>
+        </div>
+      </div>
+      <div class="col-lg-6">
+        {% if result %}
+          {% block result %}{% endblock %}
+        {% else %}
+          <div class="result-placeholder">
+            <div class="placeholder-orbit"><span>{{ icon }}</span></div>
+            <span class="small-label">TU RESULTADO APARECERÁ AQUÍ</span>
+            <h2>Un cálculo claro,<br>en un instante.</h2>
+            <p>Completa los datos y selecciona <strong>Calcular resultado</strong> para ver el detalle.</p>
+          </div>
+        {% endif %}
+        <div class="trust-note"><span class="trust-check">✓</span><span><strong>Fácil de revisar</strong><br>Mostramos los datos ingresados y cada parte del cálculo.</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+{% endblock %}

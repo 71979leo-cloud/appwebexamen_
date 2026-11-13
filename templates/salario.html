@@ -1,0 +1,24 @@
+{% extends "calculadora.html" %}
+{% block title %}Salario{% endblock %}
+{% set page_label = "Salario" %}
+{% set heading = "Calculadora de salario" %}
+{% set description = "Calcula tu pago considerando horas normales y horas extra." %}
+{% set form_heading = "Calcula tu salario" %}
+{% set form_description = "Las horas después de las primeras 40 se pagan al doble." %}
+{% set icon = "↗" %}
+{% block fields %}
+  <div class="mb-3"><label for="horas" class="form-label">Horas trabajadas</label><input class="form-control form-control-lg" id="horas" name="horas" type="number" min="0" step="0.01" value="{{ values.horas }}" required></div>
+  <div class="mb-3"><label for="pago_hora" class="form-label">Pago por hora</label><div class="input-group input-group-lg"><span class="input-group-text">$</span><input class="form-control" id="pago_hora" name="pago_hora" type="number" min="0" step="0.01" value="{{ values.pago_hora }}" required></div></div>
+{% endblock %}
+{% block result %}
+<div class="result-panel">
+  <div class="result-heading"><span class="result-icon">✓</span><div><span class="small-label">CÁLCULO COMPLETADO</span><h2>Resumen de salario</h2></div></div>
+  <div class="input-summary"><span>Jornada registrada</span><strong>{{ result.horas }} h · {{ result.pago_hora }}/h</strong></div>
+  <div class="result-rows">
+    <div><span>{{ result.horas_normales }} h normales</span><strong>{{ result.pago_normal }}</strong></div>
+    <div><span>{{ result.horas_extra }} h extra · pago doble</span><strong>{{ result.pago_extra }}</strong></div>
+  </div>
+  <div class="total-row"><span>Pago total</span><strong>{{ result.total }}</strong></div>
+  <div class="info-note">Las primeras 40 horas se pagan normal; las adicionales, al doble.</div>
+</div>
+{% endblock %}

@@ -1,0 +1,22 @@
+{% extends "calculadora.html" %}
+{% block title %}Temperatura{% endblock %}
+{% set page_label = "Temperatura" %}
+{% set heading = "Conversor de temperatura" %}
+{% set description = "Convierte grados Celsius a Fahrenheit y Kelvin al mismo tiempo." %}
+{% set form_heading = "Convierte una temperatura" %}
+{% set form_description = "Escribe un valor en grados Celsius para ver las equivalencias." %}
+{% set icon = "°" %}
+{% block fields %}
+  <div class="mb-3"><label for="celsius" class="form-label">Temperatura en Celsius</label><div class="input-group input-group-lg"><input class="form-control" id="celsius" name="celsius" type="number" step="any" value="{{ values.celsius }}" required><span class="input-group-text">°C</span></div></div>
+{% endblock %}
+{% block result %}
+<div class="result-panel">
+  <div class="result-heading"><span class="result-icon">✓</span><div><span class="small-label">CONVERSIÓN COMPLETADA</span><h2>Equivalencias</h2></div></div>
+  <div class="temperature-source"><span>Temperatura ingresada</span><strong>{{ result.celsius }} °C</strong></div>
+  <div class="temperature-grid">
+    <div class="temperature-card"><span>FAHRENHEIT</span><strong>{{ result.fahrenheit }}<small>°F</small></strong></div>
+    <div class="temperature-card"><span>KELVIN</span><strong>{{ result.kelvin }}<small>K</small></strong></div>
+  </div>
+  <div class="info-note">Fórmulas: °F = (°C × 9/5) + 32 · K = °C + 273.15.</div>
+</div>
+{% endblock %}

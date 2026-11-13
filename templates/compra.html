@@ -1,0 +1,24 @@
+{% extends "calculadora.html" %}
+{% block title %}Compra{% endblock %}
+{% set page_label = "Compra" %}
+{% set heading = "Calculadora de compra" %}
+{% set description = "Conoce el subtotal y revisa si tu compra obtiene el 10 % de descuento." %}
+{% set form_heading = "Calcula tu compra" %}
+{% set form_description = "Ingresa la cantidad de artículos y su precio unitario." %}
+{% set icon = "$" %}
+{% block fields %}
+  <div class="mb-3"><label for="cantidad" class="form-label">Cantidad de artículos</label><input class="form-control form-control-lg" id="cantidad" name="cantidad" type="number" min="1" step="1" value="{{ values.cantidad }}" required></div>
+  <div class="mb-3"><label for="precio" class="form-label">Precio por artículo</label><div class="input-group input-group-lg"><span class="input-group-text">$</span><input class="form-control" id="precio" name="precio" type="number" min="0" step="0.01" value="{{ values.precio }}" required></div></div>
+{% endblock %}
+{% block result %}
+<div class="result-panel">
+  <div class="result-heading"><span class="result-icon">✓</span><div><span class="small-label">CÁLCULO COMPLETADO</span><h2>Resumen de compra</h2></div></div>
+  <div class="input-summary"><span>Artículos</span><strong>{{ result.cantidad }} × {{ result.precio }}</strong></div>
+  <div class="result-rows">
+    <div><span>Subtotal</span><strong>{{ result.subtotal }}</strong></div>
+    <div><span>Descuento <span class="discount-pill">10 %</span></span><strong class="{% if result.aplica_descuento %}discount-value{% endif %}">− {{ result.descuento }}</strong></div>
+  </div>
+  <div class="total-row"><span>Total a pagar</span><strong>{{ result.total }}</strong></div>
+  {% if result.aplica_descuento %}<div class="success-note">¡Excelente! Tu compra supera $1,000 y ahorraste {{ result.descuento }}.</div>{% else %}<div class="info-note">El descuento se aplica en compras mayores a $1,000.</div>{% endif %}
+</div>
+{% endblock %}

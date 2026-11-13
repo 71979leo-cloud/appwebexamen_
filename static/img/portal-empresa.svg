@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="700" viewBox="0 0 1200 700" role="img" aria-labelledby="title desc">
+  <title id="title">Equipo Nexo</title><desc id="desc">Ilustración de un equipo diverso que colabora alrededor de una mesa.</desc>
+  <defs><linearGradient id="bg" x1="0" x2="1" y1="0" y2="1"><stop stop-color="#dce9f3"/><stop offset="1" stop-color="#bdcfdf"/></linearGradient></defs>
+  <rect width="1200" height="700" fill="url(#bg)"/><circle cx="945" cy="105" r="185" fill="#ffffff" opacity=".24"/><circle cx="173" cy="646" r="258" fill="#6ba6a5" opacity=".18"/><path d="M0 582c240-97 400-10 579 0 221 12 390-103 621-8v126H0z" fill="#adc8d2" opacity=".7"/>
+  <rect x="270" y="439" width="658" height="42" rx="20" fill="#355269"/><path d="M340 474l-40 174m568-174 43 174" stroke="#355269" stroke-width="25" stroke-linecap="round"/>
+  <rect x="408" y="355" width="378" height="34" rx="17" fill="#fff" opacity=".9"/><rect x="440" y="326" width="125" height="23" rx="11" fill="#77b8a8"/><rect x="595" y="326" width="158" height="23" rx="11" fill="#e9b46b"/>
+  <circle cx="393" cy="242" r="63" fill="#b8795b"/><path d="M329 240c-3-63 23-98 68-98 45 0 72 35 64 92-17-12-36-32-45-49-20 23-48 38-87 55" fill="#24394d"/><path d="M294 421c6-87 42-133 104-133 65 0 99 46 106 133" fill="#348c7b"/><path d="M347 309l44 58 45-58" fill="#e9f4ef"/><path d="M385 366l-34 75m85-75 34 75" stroke="#266f66" stroke-width="12" stroke-linecap="round"/>
+  <circle cx="601" cy="223" r="67" fill="#e1ae88"/><path d="M536 219c-2-63 23-98 67-98 48 0 75 37 66 103-19-9-34-28-47-51-20 24-50 37-86 46" fill="#293d50"/><path d="M493 419c5-90 42-139 108-139 63 0 101 49 107 139" fill="#e5a653"/><path d="M557 296l44 55 44-55" fill="#fff6e8"/><path d="M599 351v65" stroke="#fff6e8" stroke-width="11"/>
+  <circle cx="817" cy="246" r="60" fill="#986146"/><path d="M757 240c-4-60 24-94 67-94 41 0 68 33 60 88-19-7-39-22-52-43-15 24-41 39-75 49" fill="#263849"/><path d="M710 421c7-85 39-130 107-130 61 0 94 45 101 130" fill="#5386b3"/><path d="M769 306l48 58 44-58" fill="#edf6fb"/>
+  <path d="M919 227h103v89H919z" fill="#fff" opacity=".87"/><path d="M939 248h63m-63 20h42m-42 20h55" stroke="#629b91" stroke-width="7" stroke-linecap="round"/><circle cx="971" cy="184" r="21" fill="#f2bc6e"/><path d="M1007 174l18-14m-13 37h25m-46-53v-20" stroke="#fff" stroke-width="5" stroke-linecap="round" opacity=".8"/>
+  <circle cx="247" cy="203" r="12" fill="#fff" opacity=".74"/><path d="M191 332l15 15m0-15-15 15" stroke="#fff" stroke-width="6" stroke-linecap="round"/>
+</svg>
